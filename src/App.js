@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
@@ -7,6 +7,9 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import SearchIcon from '@material-ui/icons/Search';
 
 export default () => {
+
+  const [chatList, setChatList] = useState([{}, {}, {}, {}]);
+
   return (
     <div className="app-window">
 
@@ -32,7 +35,9 @@ export default () => {
         </div>
 
         <div className="chatlist">
-          
+          {chatList.map( (item, key) => (
+            
+          ))}
         </div>
 
       </div>
