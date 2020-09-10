@@ -12,6 +12,7 @@ import SearchIcon from '@material-ui/icons/Search';
 export default () => {
 
   const [chatList, setChatList] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]);
+  const [activeChat, setActiveChat] = useState({});
 
   return (
     <div className="app-window">
@@ -48,7 +49,11 @@ export default () => {
       </div>
 
       <div className="contentarea">
-        <ChatIntro />
+        
+        {activeChat.chatId === undefined &&
+          <ChatIntro />
+        }
+
       </div>
 
     </div>
