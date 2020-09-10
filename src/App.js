@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+import ChatListItem from './components/ChatListItem';
+
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import ChatIcon from '@material-ui/icons/Chat';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
@@ -36,7 +38,9 @@ export default () => {
 
         <div className="chatlist">
           {chatList.map( (item, key) => (
-            
+            <ChatListItem 
+              key={key}
+            />
           ))}
         </div>
 
